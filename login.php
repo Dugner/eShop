@@ -55,6 +55,7 @@
                 <input type="password" class="form-control" name="password" placeholder="Your password..." required>
             </div>
             <input type="submit" value="Login" class="btn btn-success btn-lg btn-block">
+            
         </form>
     
 <?php
