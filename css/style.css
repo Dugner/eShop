@@ -1,0 +1,15 @@
+/* CSS rules linked to the STARTER TEMPLATE */
+body {
+  padding-top: 5rem;
+}
+.starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+/* ***************************************** */
+
+#product-eshop:hover {
+  transform: scale(1.05);
+  overflow: hidden;
+  transition: 1s;
+}
