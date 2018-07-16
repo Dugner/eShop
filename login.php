@@ -5,10 +5,11 @@
 
     if($_POST)
     {
-        $req = "SELECT * FROM user WHERE pseudo = :pseudo";
+        $req = "SELECT * FROM user WHERE pseudo = :pseudo OR email =:email";
 
         $result = $pdo->prepare($req);
         $result->bindValue(":pseudo", $_POST['pseudo'], PDO::PARAM_STR);
+        $result->bindValue(":email", $_POST['email'], PDO::PARAM_STR);
 
         $result->execute();
 
@@ -43,7 +44,11 @@
     }
 
 ?>
+
+        <nav aria-label="breadcrumb">
+
         <nav aria-label="breadcrumb" id="bradscrupSing">
+
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="<?=URL?>">Home</a></li>
                 <li class="breadcrumb-item"><a href="#">Connect</a></li>
@@ -63,6 +68,8 @@
             <input type="submit" value="Login" class="btn btn-success btn-lg btn-block">
             
         </form>
+        <br>
+        <a href="password.php" class="btn btn-danger btn-lg btn-block">Forgot your password?</a>
     
 <?php
     require_once("inc/footer.php");

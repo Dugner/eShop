@@ -48,6 +48,7 @@ function userAdmin()
     if(userConnect() && $_SESSION['user']['privilege'] == 1) return TRUE;
     else return FALSE;
 }
+
 function addProduct($id_product, $quantity, $picture, $title, $price) 
 {
     if(!isset($_SESSION['cart'])) 
@@ -113,3 +114,4 @@ function formatPrice($total)
 		return $total;
 	}
 }
+
