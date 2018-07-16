@@ -15,8 +15,8 @@ $attributes = [
 $pdo = new PDO($dsn, $login, $pwd, $attributes);
 
 //>> declare CONSTANTS
-define('URL', 'http://localhost:8080/eshop/');
-define('ROOT_TREE', $_SERVER['DOCUMENT_ROOT'] . 'eshop/');
+define('URL', 'http://localhost/PHP/6.eshop/');
+define('ROOT_TREE', $_SERVER['DOCUMENT_ROOT'] . '/PHP/6.eshop/');
 // We just declared the way to access our files + URL
 
 //>> declare VARIABLES
