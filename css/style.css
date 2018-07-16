@@ -1,6 +1,8 @@
 /* CSS rules linked to the STARTER TEMPLATE */
 body {
   padding-top: 5rem;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif
 }
 .starter-template {
   padding: 3rem 1.5rem;
@@ -12,4 +14,234 @@ body {
   transform: scale(1.05);
   overflow: hidden;
   transition: 1s;
+}
+#navbars {
+  opacity: 0.4;
+  position: fixed;
+  padding-top: 20px;
+  background-color: #ff4e50;
+}
+#navbars a{
+font-size: 15px;
+}
+
+#carouselExampleIndicators img{
+  height: 650px;
+}
+/* ########################################
+ARTICLE
+########################################*/
+
+/*
+1 - Generals properties :
+box-sizing, transition-duration
+background #d8e0e5 and the font is Open Sans.
+*/
+*{
+
+  box-sizing: border-box;
+  transition-duration: 0.3s;
+  }
+  body{
+    font-family: Open Sans;
+  }
+  
+  /*
+  2 - the article will always be
+        - 370px large and 420px tall
+        - perfectly centered
+        - have a shadow (20px blur, no spread centered)
+  */
+  article{
+    width: 370px;
+    height: 420px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
+    overflow: hidden;
+    background-color: white;
+  }
+  /*
+  2 - bis - when you are hover the card :
+            -  it move a bit to the top
+            -  the shadow is more blurry (50px)
+  */
+  article:hover{
+    transform: translate(-50%, -55%);
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
+  }
+  /*
+  3 - the date is
+        - rounded
+        - positioned at the top right of the card
+        - is written in bold white on orange background : #ee5c35
+  */
+  .date{
+    color: white;
+    background-color: lightslategray;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    top:5px;
+    right:5px;
+  }
+  /*
+  4 - the header is
+      - using 55% of the height by default
+      - using 20% when hovering the card
+  4 - bis - the image in the header scale up and rotate a bit when hovering the card
+  */
+  
+  #headerArt{
+    height: 55%;
+    overflow: hidden;
+  }
+  article:hover #headerArt {
+    height: 20%;
+  }
+  article:hover #headerArt #imgArt{
+    transform: translate(0, -40px) scale(1.2) rotate(20deg);
+    opacity: 0.5;
+  }
+  
+  /*
+  5 - The FOOTER is
+      - ALWAYS POSITIONNED at the bottom of the card
+      - use all the width
+      - has a background white
+      - its content is spaced from the borded by 20px
+  5 - bis - the images (icons) of the footer have 5px padding of their left and 10px opn their right
+  */
+  #footerArt{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    padding: 10px 20px;
+  }
+  #footerArt #imgArt{
+    padding-left: 10px;
+    padding-right: 5px;
+  }
+  
+  
+  /*
+  6 - section
+    Section h2  has a background orange #ee5c35 and is positionned ABOVE THE Section
+                you will have to think about the right position value to use.
+    Section h3 is a 2rem text space by 20px to everything
+    Section h4 is a 1.2rem orange text
+    Section paragraphe is HIDDEN and show up when the header shrinks
+        You may want to apply some styling to the opacity and the mouvement during the animation
+  */
+  section{
+    position: relative;
+    background-color: white;
+  }
+  article h2{
+    background-color: lightslategray;
+    position: absolute;
+    bottom:100%;
+    color: white;
+    border: 1px solid lightslategray;
+    margin: 0;
+    padding-left: 0;
+  }
+  
+  article h3{
+    margin: 0;
+    padding: 20px;
+    font-size: 2rem;
+  }
+  
+  article h4{
+    margin: 0;
+    color: lightslategray;
+    font-size: 1.2rem;
+    padding-left: 20px;
+  }
+  
+  article section p{
+    opacity: 0;
+    padding-left: 20px;
+  }
+  
+  article:hover section p{
+    opacity: 1;
+    padding-left: 20px;
+  }
+  
+#articlesRow{
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+
+#aricle1{
+  margin-right: 70px;
+}
+
+
+/*#############################
+
+##############################*/
+
+footer{
+  margin-top: 40px;
+  margin-bottom: 40px;
+  background-color: #3a3a3a;
+  opacity: 0.9;
+  margin-bottom: -20px;
+  
+}
+footer h4{
+      padding: 10px ;
+      color: #ff4e50;
+}
+  
+footer h5{
+      font-weight: bold;
+      margin: 20px;
+  }
+footer {  
+  display: flex;
+  justify-content: center;
+}
+footer ul li a{
+          text-decoration: none;
+          color: rgba(0,0,0,0.6);
+  }
+  
+.design h5
+      {
+          color: rgba(0,0,0,0.4);
+      }
+  
+/* ########################### 
+Add the bubble on the cart 
+###############################*/
+span .bubble
+{
+	color: white; 
+	text-align: center; 
+	width: 15px; 
+	height: 16px; 
+	border-radius: 15px; 
+	line-height: 15px; 
+	vertical-align: middle; 
+	background: red;
+	margin-left: 4px;
+	display: inline-block;
+	margin-right: 5px;
+	font-size: 10px;
+	font-family: arial;
+}
+
+#bradscrupSing{
+  margin-top: -73px;
 }

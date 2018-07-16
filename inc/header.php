@@ -18,14 +18,16 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 
+    <!-- AwesomeFont -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
     <!-- My CSS -->
-    <link href="css/style.css" rel="stylesheet">
+    <link  rel="stylesheet" href="css/style.css">
 
   </head>
 
   <body>
-
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" id="navBar">
       <a class="navbar-brand" href="<?= URL ?>">MyEshop.com</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -33,8 +35,8 @@
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="<?= URL ?>">Home <span class="sr-only">(current)</span></a>
+          <li class="nav-item">
+            <a class="nav-link" href="<?= URL ?>">Home</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="<?= URL ?>eshop.php">Eshop</a>
@@ -70,7 +72,9 @@
               <a class="nav-link" href="<?= URL ?>admin/product_form.php">BackOffice access</a>
             </li>
           <?php endif; ?>
-
+          <li>
+            <a class="nav-link" href="<?=URL?>cart.php"><i class="fas fa-shopping-cart"></i><?php if(productNumber()){echo'<span class="bubble">' . productNumber() . '</span>';} ?></a>
+          </li>
         </ul>
       </div>
     </nav>

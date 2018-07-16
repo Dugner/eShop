@@ -43,7 +43,13 @@
     }
 
 ?>
-
+        <nav aria-label="breadcrumb" id="bradscrupSing">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="<?=URL?>">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Connect</a></li>
+                <li class="breadcrumb-item active" aria-current="page"><?= $page ?></li>
+            </ol>
+        </nav>
         <h1><?= $page ?></h1>
         
         <form action="" method="post">
@@ -55,6 +61,7 @@
                 <input type="password" class="form-control" name="password" placeholder="Your password..." required>
             </div>
             <input type="submit" value="Login" class="btn btn-success btn-lg btn-block">
+            
         </form>
     
 <?php
